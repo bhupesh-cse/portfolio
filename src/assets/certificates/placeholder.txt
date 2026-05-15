@@ -1,0 +1,4 @@
+Place your certificate images here:
+- sih-2025.jpg
+- ieee-yesist12.jpg
+- shankara-hackathon.jpg
