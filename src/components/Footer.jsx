@@ -16,15 +16,15 @@ const Footer = () => (
 
       <div className="flex items-center gap-5">
         <a href={personalInfo.github} target="_blank" rel="noopener noreferrer"
-          className="text-slate-700 hover:text-slate-300 transition-colors" aria-label="GitHub">
+          className="text-slate-700 hover:text-violet-400 transition-colors cursor-pointer" aria-label="GitHub">
           <FaGithub size={14} />
         </a>
         <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer"
-          className="text-slate-700 hover:text-slate-300 transition-colors" aria-label="LinkedIn">
+          className="text-slate-700 hover:text-blue-400 transition-colors cursor-pointer" aria-label="LinkedIn">
           <FaLinkedin size={14} />
         </a>
         <Link to="hero" smooth duration={600} className="cursor-pointer">
-          <div className="text-slate-700 hover:text-indigo-400 transition-colors">
+          <div className="text-slate-700 hover:text-cyan-400 transition-colors">
             <HiArrowUp size={14} />
           </div>
         </Link>

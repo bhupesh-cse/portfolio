@@ -37,8 +37,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
           {/* Logo */}
           <Link to="hero" smooth duration={500} className="cursor-pointer select-none">
-            <span className="font-black text-base text-white tracking-tight">
-              Bhupesh<span className="text-indigo-400">.</span>
+            <span className="font-black text-base text-white tracking-tight text-heading">
+              Bhupesh<span className="text-gradient">.</span>
             </span>
           </Link>
 
@@ -48,7 +48,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               <Link key={link.to} to={link.to} smooth duration={500} spy
                 onSetActive={() => setActive(link.to)} className="cursor-pointer">
                 <span className={`hover-line text-sm transition-colors duration-200 ${
-                  active === link.to ? "text-indigo-400 font-semibold" : "text-slate-400 hover:text-slate-200"
+                  active === link.to ? "text-violet-400 font-semibold" : "text-slate-400 hover:text-slate-200"
                 }`}>
                   {link.label}
                 </span>
@@ -59,7 +59,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           {/* Right */}
           <div className="flex items-center gap-3">
             <button onClick={toggleDarkMode}
-              className="text-slate-600 hover:text-slate-300 transition-colors p-1"
+              className="text-slate-600 hover:text-violet-400 transition-colors p-1"
               aria-label="Toggle theme">
               {darkMode ? <MdLightMode size={16} /> : <MdDarkMode size={16} />}
             </button>
@@ -86,7 +86,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               {navLinks.map((link) => (
                 <Link key={link.to} to={link.to} smooth duration={500}
                   onClick={() => setMenuOpen(false)} className="cursor-pointer">
-                  <div className="py-2.5 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
+                  <div className="py-2.5 text-sm text-slate-300 hover:text-violet-400 transition-colors">
                     {link.label}
                   </div>
                 </Link>

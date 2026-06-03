@@ -17,8 +17,13 @@ const iconMap = {
 };
 
 const catColor = {
-  Language:"#6366f1", Web:"#38bdf8", IoT:"#a855f7",
-  AI:"#ec4899", Embedded:"#f59e0b", Backend:"#10b981", Tools:"#f97316",
+  Language: "#3B82F6",
+  Web:      "#06B6D4",
+  IoT:      "#8B5CF6",
+  AI:       "#F43F5E",
+  Embedded: "#F59E0B",
+  Backend:  "#10B981",
+  Tools:    "#F97316",
 };
 
 const groupBy = (arr, key) =>
@@ -39,7 +44,7 @@ const Skills = () => {
 
         <div ref={ref} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Object.entries(grouped).map(([cat, items], gi) => {
-            const color = catColor[cat] || "#6366f1";
+            const color = catColor[cat] || "#8B5CF6";
             return (
               <motion.div
                 key={cat}
@@ -63,7 +68,7 @@ const Skills = () => {
                     <div key={skill.name}>
                       <div className="flex items-center justify-between mb-1.5">
                         <div className="flex items-center gap-2">
-                          <span className="text-slate-500 text-sm" style={{ color: `${color}99` }}>
+                          <span className="text-sm" style={{ color: `${color}` }}>
                             {iconMap[skill.icon] || <MdDeviceHub />}
                           </span>
                           <span className="text-slate-300 text-xs font-medium">{skill.name}</span>

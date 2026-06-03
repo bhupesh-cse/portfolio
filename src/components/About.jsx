@@ -5,10 +5,10 @@ import SectionTitle from "./SectionTitle";
 import { FaMicrochip, FaBrain, FaRobot, FaCode } from "react-icons/fa";
 
 const focuses = [
-  { icon: <FaMicrochip />, title: "IoT & Embedded",   desc: "Raspberry Pi (Zero/3/4/5), Arduino, STM boards, sensor networks, MQTT, home automation." },
-  { icon: <FaBrain />,     title: "AI & ML",           desc: "Computer vision, NLP, AI-powered automation, model integration into hardware." },
-  { icon: <FaRobot />,     title: "Robotics",          desc: "Autonomous robots, smart irrigation, waste segregation, disaster response systems." },
-  { icon: <FaCode />,      title: "Software & APIs",   desc: "Python, C/C++, HTML/CSS, REST APIs, Firebase, Supabase, real-time dashboards." },
+  { icon: <FaMicrochip />, title: "IoT & Embedded",   desc: "Raspberry Pi (Zero/3/4/5), Arduino, STM boards, sensor networks, MQTT, home automation.", color: "#8B5CF6" },
+  { icon: <FaBrain />,     title: "AI & ML",           desc: "Computer vision, NLP, AI-powered automation, model integration into hardware.", color: "#F43F5E" },
+  { icon: <FaRobot />,     title: "Robotics",          desc: "Autonomous robots, smart irrigation, waste segregation, disaster response systems.", color: "#06B6D4" },
+  { icon: <FaCode />,      title: "Software & APIs",   desc: "Python, C/C++, HTML/CSS, REST APIs, Firebase, Supabase, real-time dashboards.", color: "#10B981" },
 ];
 
 const About = () => {
@@ -32,18 +32,18 @@ const About = () => {
               <p>
                 I'm <span className="text-white font-semibold">Bhupesh Nagda</span>, a final-year
                 Computer Science Engineering student at Geetanjali Institute of Technical Studies,
-                Udaipur. I specialise in <span className="text-indigo-300 font-medium">IoT development
+                Udaipur. I specialise in <span className="text-violet-300 font-medium">IoT development
                 and embedded systems</span> — building hardware and software that work together to
                 solve real-world problems.
               </p>
               <p>
                 My hands-on experience includes Raspberry Pi (Zero, 3, 4, 5), Arduino, and STM
-                microcontroller boards. I completed a dedicated <span className="text-indigo-300 font-medium">
+                microcontroller boards. I completed a dedicated <span className="text-cyan-300 font-medium">
                 3-month offline IoT training program</span> and applied that knowledge across 7+ projects
                 ranging from smart healthcare kiosks to autonomous robots.
               </p>
               <p>
-                I'm a <span className="text-indigo-300 font-semibold">Smart India Hackathon 2025 Winner</span> (Hardware
+                I'm a <span className="text-amber-300 font-semibold">Smart India Hackathon 2025 Winner</span> (Hardware
                 Edition Grand Finale), IEEE YESIST-12 winner, and Shankara Global Hackathon 1st prize holder.
                 I enjoy working at the intersection of hardware, AI, and real-world impact.
               </p>
@@ -75,8 +75,12 @@ const About = () => {
                 transition={{ duration: 0.4, delay: 0.1 + i * 0.08 }}
                 className="card rounded-xl p-4 flex gap-3 items-start"
               >
-                <div className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20
-                  flex items-center justify-center text-indigo-400 flex-shrink-0 text-sm mt-0.5">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-sm mt-0.5"
+                  style={{
+                    background: `${f.color}15`,
+                    border: `1px solid ${f.color}30`,
+                    color: f.color,
+                  }}>
                   {f.icon}
                 </div>
                 <div>

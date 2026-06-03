@@ -296,7 +296,7 @@ const GalleryCard = ({ item, index, inView, onOpen }) => {
         <div className="flex items-start justify-between gap-2 mb-1.5">
           <h3
             className="text-white font-bold text-sm leading-snug
-              group-hover:text-indigo-300 transition-colors"
+              group-hover:text-violet-300 transition-colors"
           >
             {item.event}
           </h3>

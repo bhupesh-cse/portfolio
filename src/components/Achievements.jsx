@@ -5,8 +5,7 @@ import SectionTitle from "./SectionTitle";
 import { achievements } from "../data/portfolioData";
 
 /* Top 3 get a special "podium" treatment */
-const podiumColors = ["#f59e0b", "#94a3b8", "#cd7c2f"];
-const podiumLabels = ["1st", "2nd", "3rd"];
+const podiumColors = ["#F59E0B", "#94a3b8", "#cd7c2f"];
 
 const Achievements = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.04 });
@@ -74,7 +73,7 @@ const Achievements = () => {
                 className="card rounded-xl p-4 group"
               >
                 <div className="text-xl mb-2">{item.stat}</div>
-                <div className="text-indigo-400 mono text-[10px] font-bold uppercase tracking-wider mb-1">
+                <div className="text-violet-400 mono text-[10px] font-bold uppercase tracking-wider mb-1">
                   {item.statLabel}
                 </div>
                 <h3 className="text-slate-300 text-xs font-medium leading-snug mb-1">{item.title}</h3>

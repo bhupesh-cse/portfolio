@@ -31,7 +31,7 @@ const Experience = () => {
                   <p className="text-slate-500 text-sm mt-0.5">{exp.company}</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-indigo-400 font-medium">{exp.duration}</span>
+                  <span className="text-xs text-violet-400 font-medium">{exp.duration}</span>
                   <div className="text-xs text-slate-600 mt-0.5">{exp.type}</div>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Experience = () => {
               <ul className="space-y-1.5 mb-4">
                 {exp.responsibilities.map((r, ri) => (
                   <li key={ri} className="flex items-start gap-2.5 text-slate-400 text-sm">
-                    <span className="mt-2 w-1 h-1 rounded-full bg-indigo-500 flex-shrink-0" />
+                    <span className="mt-2 w-1 h-1 rounded-full bg-violet-500 flex-shrink-0" />
                     {r}
                   </li>
                 ))}
@@ -51,12 +51,7 @@ const Experience = () => {
               {/* Tech */}
               <div className="flex flex-wrap gap-2">
                 {exp.technologies.map((t) => (
-                  <span
-                    key={t}
-                    className="text-xs px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/15"
-                  >
-                    {t}
-                  </span>
+                  <span key={t} className="chip">{t}</span>
                 ))}
               </div>
             </motion.div>

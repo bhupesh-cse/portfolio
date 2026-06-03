@@ -48,16 +48,20 @@ const Contact = () => {
 
             <div className="space-y-3 mb-7">
               {[
-                { icon: <HiMail size={14} />,          label: personalInfo.email,    href: `mailto:${personalInfo.email}` },
-                { icon: <HiPhone size={14} />,         label: personalInfo.phone,    href: `tel:${personalInfo.phone}` },
-                { icon: <HiLocationMarker size={14} />, label: personalInfo.location, href: "#" },
+                { icon: <HiMail size={14} />,          label: personalInfo.email,    href: `mailto:${personalInfo.email}`, color: "#F43F5E" },
+                { icon: <HiPhone size={14} />,         label: personalInfo.phone,    href: `tel:${personalInfo.phone}`, color: "#10B981" },
+                { icon: <HiLocationMarker size={14} />, label: personalInfo.location, href: "#", color: "#3B82F6" },
               ].map((item) => (
                 <a key={item.label} href={item.href}
                   className="flex items-center gap-3 text-slate-400 hover:text-white text-sm
-                    transition-colors group">
-                  <span className="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/15
-                    flex items-center justify-center text-indigo-400 flex-shrink-0
-                    group-hover:bg-indigo-500/20 transition-colors">
+                    transition-colors group cursor-pointer">
+                  <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0
+                    transition-colors"
+                    style={{
+                      background: `${item.color}12`,
+                      border: `1px solid ${item.color}25`,
+                      color: item.color,
+                    }}>
                     {item.icon}
                   </span>
                   {item.label}
@@ -71,7 +75,7 @@ const Contact = () => {
                 { href: personalInfo.linkedin, icon: <FaLinkedin size={13} />, label: "LinkedIn" },
               ].map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  className="btn-ghost flex items-center gap-2">
+                  className="btn-ghost flex items-center gap-2 cursor-pointer">
                   {s.icon} {s.label}
                 </a>
               ))}
@@ -95,7 +99,7 @@ const Contact = () => {
                 placeholder={f.placeholder}
                 className="w-full bg-white/[0.03] border border-white/[0.07] rounded-lg
                   px-4 py-2.5 text-sm text-white placeholder-slate-700
-                  focus:outline-none focus:border-indigo-500/40 focus:bg-indigo-500/[0.03]
+                  focus:outline-none focus:border-violet-500/40 focus:bg-violet-500/[0.03]
                   transition-all"
               />
             ))}
@@ -104,12 +108,12 @@ const Contact = () => {
               required rows={4} placeholder="Tell me about your project..."
               className="w-full bg-white/[0.03] border border-white/[0.07] rounded-lg
                 px-4 py-2.5 text-sm text-white placeholder-slate-700
-                focus:outline-none focus:border-indigo-500/40 focus:bg-indigo-500/[0.03]
+                focus:outline-none focus:border-violet-500/40 focus:bg-violet-500/[0.03]
                 transition-all resize-none"
             />
 
             <button type="submit" disabled={status === "sending"}
-              className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50">
+              className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-50 cursor-pointer">
               {status === "sending" ? (
                 <><span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" /> Sending…</>
               ) : status === "sent" ? (

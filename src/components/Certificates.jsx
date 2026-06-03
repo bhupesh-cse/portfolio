@@ -34,7 +34,7 @@ const resolveImage = (cert) => {
 };
 
 const catIcon  = { Hackathon: <FaTrophy size={16} />, IEEE: <HiBadgeCheck size={16} />, GDG: <HiBadgeCheck size={16} />, Startup: <HiBadgeCheck size={16} />, Ideathon: <HiBadgeCheck size={16} /> };
-const catColor = { Hackathon: "#f59e0b", IEEE: "#6366f1", GDG: "#38bdf8", Startup: "#ec4899", Ideathon: "#a855f7", default: "#8b5cf6" };
+const catColor = { Hackathon: "#F59E0B", IEEE: "#8B5CF6", GDG: "#06B6D4", Startup: "#F43F5E", Ideathon: "#8B5CF6", default: "#8B5CF6" };
 
 /* ── Full-screen lightbox ─────────────────────────── */
 const Lightbox = ({ cert, imgSrc, onClose }) => (

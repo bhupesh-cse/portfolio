@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 
 /**
  * IoT / PCB circuit board background.
- * Dramatic but not distracting — deep indigo on near-black.
+ * Vibrant but not distracting — blue/violet/cyan on near-black.
  */
 const IoTBackground = () => {
   const canvasRef = useRef(null);
@@ -24,12 +24,12 @@ const IoTBackground = () => {
     const r = (a, b) => Math.random() * (b - a) + a;
     const ri = (a, b) => Math.floor(r(a, b));
 
-    // Colours
-    const INDIGO = "99,102,241";
+    // Colours — vibrant accent palette
+    const BLUE   = "59,130,246";
     const VIOLET = "139,92,246";
-    const CYAN   = "34,211,238";
+    const CYAN   = "6,182,212";
 
-    const COLS = [INDIGO, INDIGO, INDIGO, VIOLET, CYAN];
+    const COLS = [BLUE, BLUE, VIOLET, VIOLET, CYAN];
     const pc   = () => COLS[ri(0, COLS.length)];
 
     const STEP = 85;
@@ -135,14 +135,14 @@ const IoTBackground = () => {
         if (l.y < -20) { labels[i] = makeLabel(false); return; }
         ctx.save();
         ctx.globalAlpha = l.alpha;
-        ctx.strokeStyle = `rgba(${INDIGO},0.5)`;
+        ctx.strokeStyle = `rgba(${VIOLET},0.5)`;
         ctx.lineWidth = 0.6;
         ctx.strokeRect(l.x - 19, l.y - 7, 38, 14);
-        ctx.fillStyle = `rgba(${INDIGO},0.06)`;
+        ctx.fillStyle = `rgba(${VIOLET},0.06)`;
         ctx.fillRect(l.x - 19, l.y - 7, 38, 14);
         ctx.globalAlpha = l.alpha * 2.2;
-        ctx.fillStyle = `rgba(${INDIGO},1)`;
-        ctx.font = "bold 7.5px 'JetBrains Mono','Courier New',monospace";
+        ctx.fillStyle = `rgba(${VIOLET},1)`;
+        ctx.font = "bold 7.5px 'Space Grotesk','Courier New',monospace";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(l.text, l.x, l.y);

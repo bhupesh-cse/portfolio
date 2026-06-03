@@ -18,7 +18,7 @@ const Education = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500/40 via-indigo-500/20 to-transparent" />
+            <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-violet-500/40 via-blue-500/20 to-transparent" />
 
             <div className="space-y-6">
               {education.map((edu, i) => (
@@ -31,7 +31,7 @@ const Education = () => {
                 >
                   {/* Dot */}
                   <div className="flex-shrink-0 w-8 flex flex-col items-center">
-                    <div className="w-8 h-8 rounded-full bg-[#0f0f1e] border border-indigo-500/30
+                    <div className="w-8 h-8 rounded-full bg-[#18181B] border border-violet-500/30
                       flex items-center justify-center text-sm z-10 relative">
                       {degreeIcon[edu.id] || "📚"}
                     </div>
@@ -42,7 +42,7 @@ const Education = () => {
                     <div className="flex flex-wrap items-start justify-between gap-3 mb-2">
                       <div>
                         <h3 className="text-white font-bold text-sm">{edu.degree}</h3>
-                        <p className="text-indigo-400 text-xs mt-0.5 font-medium">{edu.field}</p>
+                        <p className="text-violet-400 text-xs mt-0.5 font-medium">{edu.field}</p>
                       </div>
                       <span className="mono text-[10px] text-slate-500 bg-white/[0.03]
                         border border-white/[0.06] px-2.5 py-1 rounded-lg">
@@ -55,7 +55,7 @@ const Education = () => {
                       <span className="text-slate-700">·</span>
                       <span>{edu.location}</span>
                       <span className="text-slate-700">·</span>
-                      <span className="text-indigo-500/70">{edu.grade}</span>
+                      <span className="text-cyan-500/70">{edu.grade}</span>
                     </div>
 
                     <p className="text-slate-500 text-xs leading-relaxed mb-3">{edu.description}</p>
@@ -63,7 +63,7 @@ const Education = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                       {edu.highlights.map((h, hi) => (
                         <div key={hi} className="flex items-start gap-2 text-slate-600 text-xs">
-                          <span className="mt-1.5 w-1 h-1 rounded-full bg-indigo-500/40 flex-shrink-0" />
+                          <span className="mt-1.5 w-1 h-1 rounded-full bg-blue-500/40 flex-shrink-0" />
                           {h}
                         </div>
                       ))}
